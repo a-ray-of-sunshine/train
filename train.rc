@@ -1,0 +1,576 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\train.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\train.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 train"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "train 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2014",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_TRAIN_DIALOG DIALOGEX 0, 0, 229, 143
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "员工培训管理系统"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "登录",IDOK,93,108,50,14
+    LTEXT           "用户登录",IDC_STATIC,98,19,33,8
+    LTEXT           "用户名",IDC_STATIC,48,47,25,8
+    LTEXT           "密  码",IDC_STATIC,47,76,25,8
+    EDITTEXT        IDC_UserName,93,44,85,18,ES_AUTOHSCROLL
+    EDITTEXT        IDC_Password,93,75,86,18,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_DIALOG1 DIALOGEX 0, 0, 266, 147
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "企业员工培训管理系统"
+FONT 10, "System"
+BEGIN
+    PUSHBUTTON      "修改密码",IDOK,182,74,50,14
+    PUSHBUTTON      "退出系统",IDCANCEL,182,107,50,14
+    DEFPUSHBUTTON   "学员信息管理",IDC_BUTTON1,35,41,50,14
+    PUSHBUTTON      "培训课程管理",IDC_BUTTON2,108,41,50,14
+    PUSHBUTTON      "企业部门管理",IDC_BUTTON3,182,41,50,14
+    PUSHBUTTON      "培训计划管理",IDC_BUTTON4,36,74,50,14
+    PUSHBUTTON      "培训教材管理",IDC_BUTTON5,109,74,50,14
+    PUSHBUTTON      "培训资源管理",IDC_BUTTON6,36,107,50,14
+    PUSHBUTTON      "培训教员管理",IDC_BUTTON7,109,107,50,14
+    LTEXT           "企业员工培训管理系统",IDC_STATIC,93,16,81,8
+END
+
+IDD_DIALOG2 DIALOG DISCARDABLE  0, 0, 181, 120
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "修改密码"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确认修改",IDOK,33,89,50,14
+    PUSHBUTTON      "取消修改",IDCANCEL,98,89,50,14
+    EDITTEXT        IDC_EDIT1,73,20,71,14,ES_PASSWORD | ES_AUTOHSCROLL
+    LTEXT           "原始密码：",IDC_STATIC,31,22,41,8
+    LTEXT           "新  密  码：",IDC_STATIC,31,44,41,8
+    LTEXT           "确认密码：",IDC_STATIC,31,66,41,8
+    EDITTEXT        IDC_EDIT2,73,40,71,14,ES_PASSWORD | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,73,60,71,14,ES_PASSWORD | ES_AUTOHSCROLL
+END
+
+IDD_DIALOG3 DIALOG DISCARDABLE  0, 0, 438, 263
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "员工信息管理"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "添加",IDOK,23,225,50,14
+    PUSHBUTTON      "返回主界面",IDCANCEL,215,225,50,14
+    CONTROL         "List1",IDC_Personnel,"SysListView32",LVS_REPORT | 
+                    WS_BORDER | WS_TABSTOP,19,28,250,141
+    GROUPBOX        "操作",IDC_STATIC,11,178,268,74
+    CONTROL         "员工基本信息",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,31,203,64,10
+    CONTROL         "员工计划",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,98,203,
+                    48,10
+    CONTROL         "员工成绩",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,149,
+                    203,48,10
+    GROUPBOX        "员工基本信息",IDC_STATIC,11,13,269,162
+    GROUPBOX        "个人培训计划",IDC_STATIC,286,13,139,81
+    CONTROL         "List2",IDC_LIST2,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,291,26,130,63
+    GROUPBOX        "员工成绩",IDC_STATIC,286,97,139,83
+    CONTROL         "List3",IDC_LIST3,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,291,110,130,66
+    GROUPBOX        "员工培训需求",IDC_STATIC,285,183,140,69
+    CONTROL         "List4",IDC_LIST4,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,290,193,131,55
+    CONTROL         "员工需求",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,200,
+                    203,48,10
+    DEFPUSHBUTTON   "更新",IDB_UPDATE,87,225,50,14
+    DEFPUSHBUTTON   "删除",IDB_DELETE,151,225,50,14
+END
+
+IDD_DIALOG4 DIALOG DISCARDABLE  0, 0, 218, 210
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "员工信息采集"
+FONT 10, "System"
+BEGIN
+    EDITTEXT        IDC_EDIT1,48,9,49,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO1,48,47,49,61,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,48,67,49,73,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_EDIT3,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,48,88,49,13
+    EDITTEXT        IDC_EDIT4,48,107,49,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,48,128,49,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,48,147,49,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT7,48,167,49,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_COMBO6,157,9,49,64,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_EDIT8,157,28,49,64,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "DateTimePicker2",IDC_EDIT9,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,157,48,48,13
+    COMBOBOX        IDC_EDIT10,157,69,49,64,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "DateTimePicker3",IDC_EDIT11,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,157,88,48,13
+    EDITTEXT        IDC_EDIT12,157,108,49,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT13,157,128,49,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT14,157,148,49,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "确定",IDOK,52,189,50,14
+    PUSHBUTTON      "重置",IDC_RESET,121,189,50,14
+    LTEXT           "员工姓名",IDC_STATIC,13,10,33,8
+    LTEXT           "所在部门号",IDC_STATIC,6,28,41,8
+    LTEXT           "学       历",IDC_STATIC,15,49,31,8
+    LTEXT           "生       日",IDC_STATIC,15,89,31,8
+    LTEXT           "籍       贯",IDC_STATIC,15,109,31,8
+    LTEXT           "性       别",IDC_STATIC,15,69,31,8
+    LTEXT           "国       籍",IDC_STATIC,15,129,31,8
+    LTEXT           "民       族",IDC_STATIC,14,149,32,12
+    LTEXT           "身份证号",IDC_STATIC,12,169,35,12
+    LTEXT           "婚姻状况",IDC_STATIC,121,10,33,8
+    LTEXT           "健康状况",IDC_STATIC,121,30,33,8
+    LTEXT           "参加工作时间",IDC_STATIC,105,50,49,8
+    LTEXT           "员工状态",IDC_STATIC,121,70,33,8
+    LTEXT           "状态时间",IDC_STATIC,121,90,33,8
+    LTEXT           "家庭住址",IDC_STATIC,121,110,33,8
+    LTEXT           "联系电话",IDC_STATIC,121,130,33,8
+    LTEXT           "E-Mail",IDC_STATIC,132,150,22,8
+    LTEXT           "工作岗位号",IDC_STATIC,113,170,41,8
+    COMBOBOX        IDC_EDIT2,48,27,49,61,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_EDIT15,156,168,49,64,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+END
+
+IDD_DIALOG5 DIALOG DISCARDABLE  0, 0, 383, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "岗位部门管理"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "增加",IDOK,102,161,50,14
+    PUSHBUTTON      "关闭",IDCANCEL,230,161,50,14
+    GROUPBOX        "岗位信息",IDC_STATIC,7,7,163,126
+    GROUPBOX        "部门信息",IDC_STATIC,175,7,201,126
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,9,16,158,114
+    CONTROL         "List2",IDC_LIST2,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,178,16,195,114
+    GROUPBOX        "操作",IDC_STATIC,79,136,224,43
+    CONTROL         "岗位信息",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,139,146,46,12
+    CONTROL         "部门信息",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,198,
+                    146,46,12
+    PUSHBUTTON      "删除",IDCANCEL2,166,161,50,14
+END
+
+IDD_DIALOG6 DIALOG DISCARDABLE  0, 0, 159, 87
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "岗位信息"
+FONT 10, "System"
+BEGIN
+    COMBOBOX        IDC_COMBO1,52,15,92,74,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO2,52,39,92,74,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    DEFPUSHBUTTON   "确认",IDOK,29,63,40,14
+    PUSHBUTTON      "重置",IDB_RESET,90,63,40,14
+    LTEXT           "岗位名称",IDC_STATIC,15,16,35,11
+    LTEXT           "岗位权利",IDC_STATIC,15,40,35,11
+END
+
+IDD_DIALOG7 DIALOG DISCARDABLE  0, 0, 151, 109
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "部门信息"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "确认",IDOK,28,86,38,14
+    PUSHBUTTON      "重置",IDB_RESET,87,86,37,14
+    LTEXT           "部门名称",IDC_STATIC,24,10,33,8
+    LTEXT           "部门经理",IDC_STATIC,24,38,33,8
+    LTEXT           "部门副经理",IDC_STATIC,16,66,41,8
+    COMBOBOX        IDC_COMBO1,61,10,76,112,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,61,36,76,112,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO4,61,62,76,112,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_DIALOG8 DIALOG DISCARDABLE  0, 0, 152, 119
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "员工个人培训计划"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,15,98,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,98,50,14
+    LTEXT           "员工号",IDC_STATIC,31,13,24,8
+    LTEXT           "课程号",IDC_STATIC,31,34,24,8
+    LTEXT           "课程开始时间",IDC_STATIC,11,55,50,8
+    LTEXT           "课程结束时间",IDC_STATIC,11,76,49,8
+    COMBOBOX        IDC_COMBO1,63,11,65,123,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO3,63,32,65,109,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER1,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,63,54,65,13
+    CONTROL         "DateTimePicker1",IDC_DATETIMEPICKER2,"SysDateTimePick32",
+                    DTS_RIGHTALIGN | WS_TABSTOP,63,73,65,13
+END
+
+IDD_DIALOG9 DIALOG DISCARDABLE  0, 0, 262, 167
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "课程管理和课程评价"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "添加课程",IDOK,16,146,50,14
+    PUSHBUTTON      "关闭窗口",IDCANCEL,196,146,50,14
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | WS_BORDER | 
+                    WS_TABSTOP,7,7,248,129
+    DEFPUSHBUTTON   "删除课程",IDOK2,76,146,50,14
+    PUSHBUTTON      "课程评价",IDCANCEL3,136,146,50,14
+END
+
+IDD_DIALOG10 DIALOG DISCARDABLE  0, 0, 187, 169
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "课程信息"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,35,148,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,100,148,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "train Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "train\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2014\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "train.EXE\0"
+            VALUE "ProductName", "train 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_TRAIN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 222
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_DIALOG1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 259
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 140
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 174
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 113
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 431
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 256
+    END
+
+    IDD_DIALOG4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_DIALOG5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 376
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_DIALOG6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 152
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 80
+    END
+
+    IDD_DIALOG7, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 144
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_DIALOG8, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_DIALOG9, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 160
+    END
+
+    IDD_DIALOG10, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DIALOG4 DLGINIT
+BEGIN
+    IDC_EDIT8, 0x403, 5, 0
+0xa1bd, 0xb5bf, "\000" 
+    IDC_EDIT8, 0x403, 5, 0
+0xd0d3, 0xa1b2, "\000" 
+    IDC_EDIT8, 0x403, 5, 0
+0xbbb2, 0xeacf, "\000" 
+    IDC_EDIT10, 0x403, 5, 0
+0xdad4, 0xb0d6, "\000" 
+    IDC_EDIT10, 0x403, 5, 0
+0xe2cd, 0xf7b5, "\000" 
+    IDC_EDIT10, 0x403, 5, 0
+0xe0c5, 0xb5d1, "\000" 
+    IDC_EDIT10, 0x403, 5, 0
+0xebc0, 0xb0d6, "\000" 
+    0
+END
+
+IDD_DIALOG6 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 9, 0
+0xd5c6, 0xa8cd, 0xb0d6, 0xb1d4, "\000" 
+    IDC_COMBO1, 0x403, 9, 0
+0xdfb8, 0xb6bc, 0xb0d6, 0xb1d4, "\000" 
+    IDC_COMBO1, 0x403, 7, 0
+0xb1b8, 0xadbe, 0xedc0, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0xadbe, 0xedc0, "\000" 
+    IDC_COMBO1, 0x403, 7, 0
+0xb1b8, 0xdcd7, 0xc3b2, "\000" 
+    IDC_COMBO1, 0x403, 5, 0
+0xdcd7, 0xc3b2, "\000" 
+    IDC_COMBO1, 0x403, 7, 0
+0xadb6, 0xc2ca, 0xa4b3, "\000" 
+    IDC_COMBO2, 0x403, 7, 0
+0xdece, 0xa8c8, 0xfbc0, "\000" 
+    IDC_COMBO2, 0x403, 7, 0
+0xf8b4, 0xc2d0, 0xcbc8, "\000" 
+    IDC_COMBO2, 0x403, 9, 0
+0xdcb9, 0xedc0, 0xb0d6, 0xb1d4, "\000" 
+    IDC_COMBO2, 0x403, 9, 0
+0xdcb9, 0xedc0, 0xadbe, 0xedc0, "\000" 
+    IDC_COMBO2, 0x403, 9, 0
+0xdcb9, 0xedc0, 0xdcd7, 0xc3b2, "\000" 
+    0
+END
+
+IDD_DIALOG7 DLGINIT
+BEGIN
+    IDC_COMBO1, 0x403, 7, 0
+0xb5d2, 0xf1ce, 0xbfb2, "\000" 
+    IDC_COMBO1, 0x403, 7, 0
+0xcbc8, 0xc2ca, 0xbfb2, "\000" 
+    IDC_COMBO1, 0x403, 7, 0
+0xc6b2, 0xf1ce, 0xbfb2, "\000" 
+    IDC_COMBO1, 0x403, 7, 0
+0xfacf, 0xdbca, 0xbfb2, "\000" 
+    IDC_COMBO1, 0x403, 7, 0
+0xaabf, 0xa2b7, 0xbfb2, "\000" 
+    IDC_COMBO1, 0x403, 7, 0
+0xadb6, 0xc2ca, 0xe1bb, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 train(&A)..."
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\train.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
